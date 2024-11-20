@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Punto 4</title>
+    </head>
+    <body>
+        <script>
+            // Función para filtrar las notas aprobadas
+            function filtrar_aprobadas(notas) {
+                return notas.filter(nota => nota >= 6);
+            }
+
+            // Función para transformar una nota a escala de 0 a 100
+            function transformar_escala(notas) {
+                return notas.map(nota => nota * 10);
+            }
+
+            // Función para calcular el promedio
+            function calcular_promedio(notas) {
+                if (notas.length === 0) return 0; // Evita división por 0
+                const suma = notas.reduce((total, nota) => total + nota, 0);
+                return suma / notas.length;
+            }
+
+            // Composición para evaluar notas
+            function evaluar_notas(notas) {
+                const notasAprobadas = filtrar_aprobadas(notas);
+                const notasEscaladas = transformar_escala(notasAprobadas);
+                const promedio = calcular_promedio(notasEscaladas);
+                return promedio;
+            }
+
+            // Ejemplo de uso
+            const notas = [5.5, 7, 8.5, 4, 10, 6];
+            const promedioEscala100 = evaluar_notas(notas);
+
+            console.log("Promedio de notas aprobadas en escala 0-100:", promedioEscala100);
+            // Output: Promedio de notas aprobadas en escala 0-100: 78.75
+        </script>
+    </body>
+</html>

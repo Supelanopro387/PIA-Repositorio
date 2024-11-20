@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Punto 2</title>
+    </head>
+    <body>
+        <script>
+            function aplicar_operacion(lista, operacion) {
+            return lista.map(operacion); // Usamos map para aplicar la función a cada elemento
+            }
+
+            // Operaciones
+            const duplicar = x => x * 2;
+            const dividir_entre_2 = x => x / 2;
+            const convertir_negativo = x => -x;
+
+            // Lista de números
+            const numeros = [1, 2, 3, 4];
+
+            // Uso de la función aplicar_operacion con diferentes operaciones
+            console.log(aplicar_operacion(numeros, duplicar));           // [2, 4, 6, 8]
+            console.log(aplicar_operacion(numeros, dividir_entre_2));   // [0.5, 1, 1.5, 2]
+            console.log(aplicar_operacion(numeros, convertir_negativo)); // [-1, -2, -3, -4]
+
+
+        </script>
+    </body>
+</html>

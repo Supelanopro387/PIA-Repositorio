@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Punto 1</title>
+    </head>
+    <body>
+        <script>
+            // Función para sumar una lista de números
+            function sumar_lista(lista) {
+                return lista.reduce((suma, num) => suma + num, 0);
+            }
+
+            // Función para filtrar números pares de una lista
+            function filtrar_pares(lista) {
+                return lista.filter(num => num % 2 === 0);
+            }
+
+            // Función para elevar al cuadrado los números de una lista
+            function elevar_cuadrado(lista) {
+                return lista.map(num => num ** 2);
+            }
+
+            // Ejemplo de uso
+            const numeros = [1, 2, 3, 4, 5];
+
+            console.log(sumar_lista(numeros)); // Output: 15
+            console.log(filtrar_pares(numeros)); // Output: [2, 4]
+            console.log(elevar_cuadrado(numeros)); // Output: [1, 4, 9, 16, 25]
+
+        </script>
+    </body>
+</html>
